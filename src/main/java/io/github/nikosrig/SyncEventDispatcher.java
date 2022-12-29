@@ -9,14 +9,14 @@ public class SyncEventDispatcher implements EventDispatcher {
 	private final Map<String, ArrayList<EventListener>> eventListeners = new HashMap<>();
 
 	@Override
-	public void dispatch(Event event) {
+	public void dispatch(Event event) throws Exception {
 		if (!this.eventListeners.containsKey(event.getName())) {
 			return;
 		}
 
-		this.eventListeners.get(event.getName()).forEach(
-				eventListener -> eventListener.handle(event)
-		);
+		for (EventListener eventListener : this.eventListeners.get(event.getName())) {
+			eventListener.handle(event);
+		}
 	}
 
 	@Override

@@ -7,7 +7,7 @@ import static org.mockito.Mockito.*;
 public class SyncEventDispatcherTest {
 
 	@Test
-	public void testShouldDispatchEventToAllListeners() {
+	public void testShouldDispatchEventToAllListeners() throws Exception {
 		SyncEventDispatcher dispatcher = new SyncEventDispatcher();
 		EventListener eventListener = mock(EventListener.class);
 		Event event = mock(Event.class);
@@ -18,6 +18,4 @@ public class SyncEventDispatcherTest {
 		dispatcher.dispatch(event);
 		verify(eventListener, times(2)).handle(any());
 	}
-
-
 }
