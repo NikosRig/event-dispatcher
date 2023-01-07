@@ -1,9 +1,5 @@
 package io.github.nikosrig;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
-
 public class SyncEventDispatcher extends AbstractEventDispatcher implements EventDispatcher {
 
 	@Override
