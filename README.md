@@ -82,7 +82,7 @@ public class ListenerProviderExample implements ListenerProvider {
 ```
 
 ### Event dispatchers
-Event dispatchers are a service objects implementing EventDispatcher. They are responsible for retrieving event listeners from a listener providers for the  dispatched event, and invoking each event listener with that Event.
+Event dispatchers are a service objects implementing EventDispatcher. They are responsible for retrieving event listeners from listener providers for the  dispatched event, and invoking each event listener with that Event.
 
 #### SyncEventDispatcher example
 
